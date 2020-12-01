@@ -4559,7 +4559,7 @@ blockquote {
   top: 20px;
   right: 0%;
   bottom: auto;
-  z-index: 3000;
+  z-index: 6000;
   display: none;
   width: 700px;
   padding: 20px;

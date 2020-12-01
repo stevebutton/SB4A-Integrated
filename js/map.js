@@ -360,14 +360,17 @@ document.addEventListener("click", (e) => { // hide popup on mouse click
     const classClick = e.target.className;
     console.log('classClick', classClick);
 
-    if (classClick === "pdf_link-BLOCK") {
+    if (classClick === "pdf_link") {
         //open pdf doc
         console.log('open pdf modal', e, e.target);
-        //openPDF(e.target.getAttribute("href"))
-        openModal(generatePdf(e.target.getAttribute("href")))
+        openPDF(e.target.getAttribute("href"))
+        //openModal(generatePdf(e.target.getAttribute("href")))
         disableWindowScroll()
     }
     if (classClick.includes("close_pdf") || classClick.includes("close-modal")) {
+
+        const pdf = document.querySelector("#pdf")
+        pdf.style.display = "none";
         enableWindowScroll()
     }
 })
@@ -536,24 +539,24 @@ function enableWindowScroll() {
 
 function toggleBorderLayer(layerName) { //show, hide, hide all layers without props
     const layers = [
-      "cameroon",
-       "sop-sb4a",
-       "sop-sb4a-quality",
-       "sop-sb4a-eud",
-       "africa",
-       "fragile",
-       "madagascar",
-       "southafrica",
-       "ghana",
-       "liberia",
-       "eu",
-       "uganda",
-       "benin",
-       "angola",
-       "togo",
-       "rwanda",
-       "DRC",
-       "morocco"
+        "cameroon",
+        "sop-sb4a",
+        "sop-sb4a-quality",
+        "sop-sb4a-eud",
+        "africa",
+        "fragile",
+        "madagascar",
+        "southafrica",
+        "ghana",
+        "liberia",
+        "eu",
+        "uganda",
+        "benin",
+        "angola",
+        "togo",
+        "rwanda",
+        "DRC",
+        "morocco"
     ]
     layers.forEach(i => {
         const v = (layerName && layerName === i) ? 'visible' : 'none';
