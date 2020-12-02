@@ -748,7 +748,7 @@ blockquote {
   min-height: 450px;
   margin-right: auto;
   margin-bottom: 50px;
-  margin-left: auto;
+  margin-left: 100px;
   padding: 60px 20px 50px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -3300,14 +3300,14 @@ blockquote {
   background-position: 0px 0px;
   background-size: auto;
   background-repeat: no-repeat;
-  -webkit-transition: opacity 200ms ease;
-  transition: opacity 200ms ease;
   -o-object-fit: fill;
   object-fit: fill;
 }
 
 .tab-link-pse:hover {
-  background-image: url('../images/PSE-hv.png');
+  background-image: url('../images/PSE.png');
+  -webkit-filter: hue-rotate(232deg);
+  filter: hue-rotate(232deg);
 }
 
 .tab-link-pse.w--current {
@@ -4063,6 +4063,14 @@ blockquote {
   overflow: visible;
 }
 
+.slide-nav-3.pse {
+  display: none;
+}
+
+.slide-nav-3.sd {
+  display: none;
+}
+
 .carousel-mapping {
   width: 100vw;
   height: 400px;
@@ -4481,7 +4489,7 @@ blockquote {
   z-index: 8888;
   display: block;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: hsla(0, 0%, 100%, 0.75);
 }
 
 .close-overlay-eip {
